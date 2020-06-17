@@ -47,3 +47,8 @@ CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
 
 # Configure a healthcheck to validate that everything is up&running
 HEALTHCHECK --timeout=10s CMD curl --silent --fail http://127.0.0.1:8080/fpm-ping
+
+# add env varibales
+ENV FIREBUG_RO_USER=${FIREBUG_RO_USER}
+ENV FIREBUG_RO_PASSWORD=${FIREBUG_RO_PASSWORD}
+ENV OBSERVIUM_PASSWORD=${OBSERVIUM_PASSWORD}
